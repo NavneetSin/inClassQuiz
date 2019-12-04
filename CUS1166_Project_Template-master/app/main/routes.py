@@ -36,7 +36,7 @@ def todolist():
 
 #
 # Route for removing a task
-@bp.route('/todolist/remove/<int:task_id>', methods=['GET','POST'])
+@bp.route('/appointment/remove/<int:appointment_id>', methods=['GET','POST'])
 def remove_task(task_id):
 
     # Query database, remove items
