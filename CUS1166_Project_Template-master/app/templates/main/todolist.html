@@ -25,7 +25,7 @@
                             <ul class="d-flex flex-column-reverse todo-list">
                              {% for task in todo_list %}
 
-                                {% if 'DONE' == task.task_status%}
+                                {% if 'done' == task.task_status%}
                                     <li class="text-danger">
                                 {% else %}
                                     <li>
@@ -37,11 +37,11 @@
                                     <div class="form-check">
 
                                       <label class="form-check-label">
-                                          {% if 'DONE' == task.task_status %}
+                                          {% if 'done' == task.task_status %}
                                             {{task.task_desc}} - <span class="badge badge-success">{{task.task_status}}</span>
-                                          {% elif 'DOING' == task.task_status %}
+                                          {% elif 'doing' == task.task_status %}
                                             {{task.task_desc}} - <span class="badge badge-warning">{{task.task_status}}</span>
-                                          {% elif 'TODO' == task.task_status %}
+                                          {% elif 'todo' == task.task_status %}
                                              {{task.task_desc}} - <span class="badge badge-danger">{{task.task_status}}</span>
                                           {% endif %}
                                             <i class="input-helper"></i>
