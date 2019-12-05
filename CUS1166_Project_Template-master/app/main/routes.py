@@ -95,13 +95,15 @@ def Schedule():
         db.session.add(new_appointment)
         db.session.commit()
         return redirect(url_for('main.view_schedule'))
-    return render_template('main/schedule_appointment.html', title='Schedule an appointment', form=form)
+    return render_template('main/display_schedules.html', title='Schedule an appointment', form=form)
 
 
 @bp.route('/Schedule/edit/<int:appointment_id>', methods=['GET', 'POST'])
 def Update_Schedule(appointment_id):
     form = AppointmentForm()
+    print(form.validate_on_submit())
     if form.validate_on_submit():
+        new_appointment = Appointment()
         current_appointment = Appointment.query.filter_by(appointment_id=appointment_id).first_or_404()
         current_appointment.customer_name = form.customer_name.data
         current_appointment.appointment_title = form.appointment_title.data
@@ -115,7 +117,7 @@ def Update_Schedule(appointment_id):
         db.session.add(current_appointment)
         db.session.commit()
 
-        return redirect(url_for('main.view_schedule'))
+        return redirect(url_for('main.display_schedule'))
 
     current_appointment = Appointment.query.filter_by(appointment_id=appointment_id).first_or_404()
 

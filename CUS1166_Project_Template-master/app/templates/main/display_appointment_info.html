@@ -14,49 +14,49 @@
                                 {{ form.customer_name.label }}<br>
                                 {{ form.customer_name(size=120) }}
                                 {% for error in form.customer_name.errors %}
-                                <span style="color: #b50100;">[{{ error }}</span>
+
                                 {% endfor %}
                             </p>
                             <p>
                                 {{ form.appointment_title.label }}<br>
                                 {{ form.appointment_title(size=120) }}
                                 {% for error in form.appointment_title.errors %}
-                                <span style="color: #b50100;">[{{ error }}</span>
+
                                 {% endfor %}
                             </p>
                             <p>
                                 {{ form.appointment_date.label }}<br>
                                 {{ form.appointment_date }}
                                 {% for error in form.appointment_date.errors %}
-                                <span style="color: #b50100;">[{{ error }}</span>
+
                                 {% endfor %}
                             </p>
                             <p>
                                 {{ form.start_time.label }}<br>
                                 {{ form.start_time }}
                                 {% for error in form.start_time.errors %}
-                                <span style="color: #b50100;">[{{ error }}</span>
+
                                 {% endfor %}
                             </p>
                               <p>
                                 {{ form.duration_of_appointment.label }}<br>
                                 {{ form.duration_of_appointment }}
                                 {% for error in form.duration_of_appointment.errors %}
-                                <span style="color: #b50100;">[{{ error }}</span>
+
                                 {% endfor %}
                             </p>
                             <p>
                                 {{ form.location.label }}<br>
                                 {{ form.location(size=120) }}
                                 {% for error in form.location.errors %}
-                                <span style="color: #b50100;">[{{ error }}</span>
+
                                 {% endfor %}
                             </p>
                             <p>
                                 {{ form.notes.label }}<br>
                                 {{ form.notes(size=120) }}
                                 {% for error in form.notes.errors %}
-                                <span style="color: #b50100;">[{{ error }}</span>
+
                                 {% endfor %}
                             </p>
                                 {{ form.appointment_status_completed }}

@@ -12,7 +12,25 @@
                             <div class="add-items d-flex">
                                 <!-- csrf_token is required to validate the form -->
                                 {{ form.csrf_token }}
-                                {{ form.task_desc(class_='form-control todo-list-input', placeholder='What do you need to do today?')}}
+                                {{ form.task_desc(class_='form-control todo-list-input', placeholder='Name?')}}
+                                {{ form.task_status_completed }}
+                                {{ form.csrf_token }}
+                                {{ form.task_desc(class_='form-control todo-list-input', placeholder='appointment_title?')}}
+                                {{ form.task_status_completed }}
+                                {{ form.csrf_token }}
+                                {{ form.task_desc(class_='form-control todo-list-input', placeholder='appointment_date?')}}
+                                {{ form.task_status_completed }}
+                                {{ form.csrf_token }}
+                                {{ form.task_desc(class_='form-control todo-list-input', placeholder='start_time?')}}
+                                {{ form.task_status_completed }}
+                                {{ form.csrf_token }}
+                                {{ form.task_desc(class_='form-control todo-list-input', placeholder='duration_of_appointment?')}}
+                                {{ form.task_status_completed }}
+                                {{ form.csrf_token }}
+                                {{ form.task_desc(class_='form-control todo-list-input', location?')}}
+                                {{ form.task_status_completed }}
+                                {{ form.csrf_token }}
+                                {{ form.task_desc(class_='form-control todo-list-input', notes?')}}
                                 {{ form.task_status_completed }}
                                 <button class="add btn btn-primary font-weight-bold todo-list-add-btn">Add</button>
                        </div>
